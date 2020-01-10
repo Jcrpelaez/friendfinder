@@ -9,7 +9,7 @@ var app = express();
 // Sets an initial port
 var PORT = process.env.PORT || 8080;
 
-var jsonParser = bodyParser.json()
+var jsonParser = bodyParser.json();
 
 // // Sets up the express app to handle data parsing
 app.use(express.urlencoded({ extend: true }));
