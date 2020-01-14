@@ -1,14 +1,12 @@
-console.log("HTML Route Connected Successfully");
+console.log("api Route Connected Successfully");
 
-let path = require("path");
+var friends = require("../data/friends.js");
 
-function htmlRoutes(app) {
-  app.get("/survey.html", function(req, res) {
-    res.sendFile(path.join(__dirname, "/../public/survey.html"));
+function apiRoutes(app) {
+  app.get("/api/friends", function(req, res) {
+    res.json(friends)
   });
 
-  app.use(function(req, res) {
-    res.sendFile(path.join(__dirname, "/../public/home.html"));
-  });
+  
 }
-module.exports = htmlRoutes;
+module.exports = apiRoutes;
