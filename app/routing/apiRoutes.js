@@ -27,6 +27,13 @@ function apiRoutes(app) {
     }
     newFriend.scores = scoresArray
 
+    var scoreComparison = [];
+    for (var j = 0; j<newFriend.scores.length;j++){
+      currentComparison += Math.abs(newFriend.scores[j] - friends[i].scores[j]);
+      scoreComparison.push(currentComparison);
+    }
+    
+
   });
   
 }
