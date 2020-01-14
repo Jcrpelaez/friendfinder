@@ -12,9 +12,9 @@ var PORT = process.env.PORT || 8080;
 var jsonParser = bodyParser.json();
 
 // // Sets up the express app to handle data parsing
-// app.use(express.urlencoded({ extend: true }));
-// app.use(express.json());
-// app.use(express.static("app/public"));
+app.use(express.urlencoded({ extend: true }));
+app.use(express.json());
+app.use(express.static("app/public"));
 
 // Setus up the bodyParser to sort JSON
 app.use(bodyParser.json());
