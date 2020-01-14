@@ -23,8 +23,8 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 // Points the server to a series of "route" files
-// require("")(app);
-// require("")(app);
+require("./app/routing/htmlRoutes.js")(app);
+require("./app/routing/apiRoutes.js")(app);
 
 // "Starts" the server
 app.listen(PORT, function() {
