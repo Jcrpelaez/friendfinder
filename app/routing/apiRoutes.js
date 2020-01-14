@@ -32,7 +32,19 @@ function apiRoutes(app) {
       currentComparison += Math.abs(newFriend.scores[j] - friends[i].scores[j]);
       scoreComparison.push(currentComparison);
     }
-    
+
+    var match = 0;
+    for (var i = 1; i < scoresArray.length;i++){
+      if (scoresArray[i] <= scoresArray[match]){
+        match = 1
+      }
+    }
+
+    var bestMatch = friends[match];
+    res.json(bestMatch);
+
+    friends.push(newFriend);
+
 
   });
   
